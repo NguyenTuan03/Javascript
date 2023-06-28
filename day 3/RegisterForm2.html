@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .width-90 {
+            min-width: 120px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container w-100 vh-100 d-flex align-items-center justify-content-center">
+        <form class="p-2 w-50 bg-warning bg-gradient" action="">
+            <h1 class="text-info bg-gradient">Đăng ký học viên</h1>
+            <p>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="text-info width-90">Họ và tên</span>
+                    </div>
+                    <div class="col-9">
+                        <input type="text">
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="text-info width-90">Ngày sinh</span>
+                    </div>
+                    <div class="col-9">
+                        <input type="date">
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="text-info width-90">Giới tính</span>
+                    </div>
+                    <div class="col-9">
+                        <input type="radio" name="gender" value="Nam"> <span>Nam</span>
+                        <input type="radio" name="gender" value="Nữ"> <span>Nữ</span>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="text-info width-90">Địa chỉ</span>
+                    </div>
+                    <div class="col-9">
+                        <textarea name="" id="" cols="20" rows=""></textarea>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="text-info width-90">Lớp</span>
+                    </div>
+                    <div class="col-9">
+                        <select name="" id="">
+                            <option value="1A">1A</option>
+                            <option value="2A">2A</option>
+                            <option value="3A">3A</option>
+                        </select>
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="text-info width-90">Email</span>
+                    </div>
+                    <div class="col-9">
+                        <input type="email">
+                    </div>
+                </div>
+            </p>
+            <p>
+                <div class="row">
+                    <div class="col-3">
+                        <span class="text-info width-90">Điện thoại</span>
+                    </div>
+                    <div class="col-9">
+                        <input type="number">
+                    </div>
+                </div>
+            </p>
+            <div class="text-center">
+                <button>Đăng Ký</button>
+                <button>Nhập lại</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
