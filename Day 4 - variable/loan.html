@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let loan = prompt("Enter loan number")
+        loan = parseInt(loan)
+        let rate = prompt("Enter rate")
+        rate = parseFloat(rate)
+        let year = prompt("Enter year")
+        year = parseInt(year)
+        var s1 = loan * (6.9/100);
+        console.log(rate);
+        if (typeof loan == "number" && typeof rate == "number" && typeof year == "number") {
+            if (year == 1) {
+                document.write(s1);
+            }
+            else {
+                document.write(loan + year*s1);
+            }
+        }
+    </script>
+</body>
+</html>
