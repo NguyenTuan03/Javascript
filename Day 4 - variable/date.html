@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <p>
+            <span>Nhap nam: </span>
+            <input type="text" id="year">
+        </p>
+        <p>
+            <span>Nhap thang: </span>
+            <input type="text" id="month">
+        </p>
+        <p>
+            <span>Nhap ngay: </span>
+            <input type="text" id="day">
+        </p>
+        <button id="show">Click to show !</button>
+    </form>
+    <p>
+        <span>Kết quả hiển thị trên màn hình là: </span>
+        <span id="showscreen"></span>
+    </p>
+    <script>
+        document.getElementById("show").addEventListener("click", function(e) {
+            e.preventDefault();
+            var year = document.getElementById("year");
+            var day = document.getElementById("day");
+            var month = document.getElementById("month");
+            var show = document.getElementById("showscreen").innerText = day.value +" - "+ month.value +" - "+ year.value;
+        })
+    </script>
+</body>
+</html>
