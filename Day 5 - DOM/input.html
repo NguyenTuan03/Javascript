@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>B1</p>
+    <button type="button" onclick="showMessege()">Click me !</button>
+    <p>B2</p>
+    <button type="button" onclick="show()">Click !</button>
+    <div id="msgDiv"></div>
+    <p>B3</p>
+    <button type="button" onclick="showmsg3()">Click !</button>
+    <p>b4</p>
+    <button type="button" onclick="showmsg4()">click !</button>
+    <script>
+        function showMessege() {
+            alert("Messege");
+        }
+        function show() {
+            document.getElementById("msgDiv").innerHTML = "Alo";
+        }
+        function showmsg3() {
+            document.write("hello world!");
+        }
+        function showmsg4() {
+            console.log("Hello world!");
+        }
+    </script>
+</body>
+</html>
