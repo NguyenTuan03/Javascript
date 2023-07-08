@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h3>Caculator</h3>
+        <p>
+            <input type="number" id="a">
+            <input type="number" id="b">
+        </p>
+        <div class="">
+            <button onclick="add()">Addition (+)</button>
+            <button onclick="subtract()">Subtraction (-)</button>
+            <button onclick="multi()">Multiplication (x)</button>
+            <button onclick="divide()">Division (/)</button>
+        </div>
+        <p id="result">
+            Result Division : 
+            <span></span>
+        </p>
+    <script>
+        function add() {
+            let a =parseInt(document.getElementById("a").value);
+            let b =parseInt(document.getElementById("b").value);
+            document.querySelector("#result").children[0].innerText = a+b;
+        }        
+        function subtract() {
+            let a =parseInt(document.getElementById("a").value);
+            let b =parseInt(document.getElementById("b").value);
+            document.querySelector("#result").children[0].innerText = a-b;
+        }
+        function multi() {
+            let a =parseInt(document.getElementById("a").value);
+            let b =parseInt(document.getElementById("b").value);
+            document.querySelector("#result").children[0].innerText = a*b;
+        }
+        function divide() {
+            let a =parseInt(document.getElementById("a").value);
+            let b =parseInt(document.getElementById("b").value);
+            if (b!=0) {
+                document.querySelector("#result").children[0].innerText = a/b;
+            }
+            else {
+                document.querySelector("#result").children[0].innerText = "cannot divide";
+            }
+        }
+    </script>
+</body>
+</html>
