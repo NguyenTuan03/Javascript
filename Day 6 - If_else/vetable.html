@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Giá hoa quả</h3>    
+    <input id="input_vet" type="text" placeholder="Nhập giá hoa quả">
+    <button id="show_price">Xem giá</button>
+    <p id="show"></p>
+    <script>
+        document.getElementById("show_price").addEventListener("click", () => {
+           let vet = document.getElementById("input_vet").value;
+           let show = document.querySelector("#show");
+           switch (vet) {
+               case "Ổi": {
+                show.innerHTML = "Ổi: 20000 kg/kg";
+                break;
+               }
+               case "Dưa Hấu": {
+                show.innerHTML = "Dưa Hấu 20000 VNĐ/kg";
+                break;
+               }
+                case "Táo": {
+                    show.innerHTML = "Táo 30000 VNĐ/kg";
+                    break;
+                }
+                case "Xoài": {
+                    show.innerHTML = "Xoài 30000 VNĐ/kg";
+                    break;
+                }
+                case "Cam": {
+                    show.innerHTML = "Cam 40000 VNĐ/kg";
+                    break;
+                }
+                case "Chôm Chôm": {
+                    show.innerHTML = "Chôm Chôm 40000 VNĐ/kg";
+                    break;
+                }
+                case "Măng Cụt": {
+                    show.innerHTML = "Măng Cụt 50000 VNĐ/kg"
+                    break;
+                }
+                default: show.innerHTML = `Our shop don't have ${vet} you want`;
+                break;
+           }
+        })
+    </script>
+</body>
+</html>
