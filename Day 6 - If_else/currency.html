@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Amount</p>
+    <input type="number" id="n">
+    <p>From Currency</p>
+    <select id="from">
+        <option value="VietNam">VietNam</option>
+        <option value="USD">USD</option>
+    </select>
+    <p>To Currency</p>
+    <select id="to">
+        <option value="USD">USD</option>
+        <option value="VietNam">VietNam</option>
+    </select>
+    <button id="btn">Convert</button>
+    <p id="show"></p>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click", (e) => {
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let n =parseFloat(document.getElementById("n").value);
+        if (from == "VietNam" && to == "USD") 
+            document.getElementById("show").innerHTML = `Result: ${n* 0.000042}`
+        if (from == "USD" && to == "VietNam")
+            document.getElementById("show").innerHTML = `Result: ${n* 23.690}`
+    })
+</script>
+</html>
