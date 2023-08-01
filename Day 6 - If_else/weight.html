@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Input weight: </p>
+    <input type="number" id="w">
+    <p>Input heighht: </p>
+    <input type="number" id="h">
+    <button id="btn">Optimize BMI</button>
+    <p id="show"></p>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click", () => {
+        let w = parseFloat(document.getElementById("w").value);
+        let h = parseFloat(document.getElementById("h").value);
+        let show = document.getElementById("show");
+        let bmi = w / (h*h);
+        console.log(bmi);
+        if (bmi < 16)
+            show.innerHTML = "gầy độ III";
+        else if (bmi < 17)
+            show.innerHTML = "gầy đồ II";
+        else if (bmi < 18.5)
+            show.innerHTML = "Gầy độ I"
+        else if (bmi < 25)
+            show.innerHTML = "Bình thường";
+        else if (bmi < 30)
+            show.innerHTML = "Thừa cân"
+        else if (bmi <35)
+            show.innerHTML = "Béo phì độ I";
+        else if (bmi < 40)
+            show.innerHTML = "Béo phì độ II";
+        else 
+            show.innerHTML = "Béo phì độ III";
+    })
+</script>
+</html>
