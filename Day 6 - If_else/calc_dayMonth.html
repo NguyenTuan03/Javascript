@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="month">
+    <button id="calc">Tính số ngày</button>
+    <p id="show"></p>
+</body>
+<script>
+    document.getElementById("calc").addEventListener("click", () => {
+        let month = parseInt(document.getElementById("month").value);
+        let show = document.getElementById("show");
+        switch (month) {
+            case 1: {
+                show.innerHTML = "Tháng 1 có 31 ngày";
+                break;
+            }
+            case 3: {
+                show.innerHTML = "Tháng 3 có 31 ngày";
+                break;
+            }
+            case 5: {
+                show.innerHTML = "Tháng 5 có 31 ngày";
+                break;
+            }
+            case 7: {
+                show.innerHTML = "Tháng 7 có 31 ngày";
+                break;
+            }
+            case 8: {
+                show.innerHTML = "Tháng 8 có 31 ngày";
+                break;
+            }
+            case 10: {
+                show.innerHTML = "Tháng 10 có 31 ngày";
+                break;
+            }
+            case 12: {
+                show.innerHTML = "Tháng 12 có 31 ngày";
+                break;
+            }
+            case 2: {
+                show.innerHTML = "28 or 29 ngày";
+                break;
+            }
+            case 4: {
+                show.innerHTML = "Tháng 4 có 30 ngày";
+                break;
+            }
+            case 6: {
+                show.innerHTML = "Tháng 6 có 30 ngày";
+                break;
+            }
+            case 9: {
+                show.innerHTML = "Tháng 9 có 30 ngày";
+                break;
+            }
+            case 11: {
+                show.innerHTML = "Tháng 11 có 30 ngày";
+                break;
+            }         
+            default: {
+                show.innerHTML = "Under 12";
+                break;
+            }   
+        }
+    })
+</script>
+</html>
