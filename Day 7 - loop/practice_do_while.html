@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let i =1,s='';
+    // while (i<=100) {
+    //     if (i == 99) {
+    //         alert("Complete!");
+    //         break;
+    //     }
+    //     s = s + i + ' ';
+    //     i++;
+    // }
+    // document.write(s);
+    //////////////////////////////////////
+    // document.write("<br>");
+    // let deg = prompt("Enter n: ");
+    // if (deg >=100) {
+    //     alert("Giam nhiet");
+    // }
+    // if (deg <= 20) {
+    //     alert("Tang niet")
+    // }
+    //////////////////////////////////////
+    // let n0=0,n1 = 1,n2=1,d=1;
+    // let i = 0,s=' ';
+    // while (d<=20) {
+    //     n0 = n1;
+    //     n1 = n2;
+    //     n2 = n0 + n1;
+    //     s = s+ n2 + ' ';
+    //     d++;
+    //     i++;
+    // }
+    // document.write(s);
+    //////////////////////////////////////
+    // let n0=0,n1 = 1,n2=1,d=1;
+    // let i = 0,s=' ';
+    // while (true) {
+    //     n0 = n1;
+    //     n1 = n2;
+    //     n2 = n0 + n1;
+    //     if (n2 % 5 == 0) {
+    //         document.write(n2);
+    //         break;
+    //     }
+    //     i++;
+    // }
+    //////////////////////////////////////
+    // let n0=0,n1 = 1,n2=1,d=1;
+    // let i = 0,s=0;
+    // while (d<=20) {
+    //     n0 = n1;
+    //     n1 = n2;
+    //     n2 = n0 + n1;
+    //     s = s+ n2 
+    //     d++;
+    //     i++;
+    // }
+    // document.write(s);
+    //////////////////////////////////////
+    // let d = 1,i=1,s=0;
+    // while (d<=30) {
+    //     if (i%7==0) {
+    //         s = s+i;
+    //         d++;    
+    //     }
+    //     i++;
+    // }
+    // document.write(s)
+    //////////////////////////////////////
+    let i =1,s='';
+    while (i<=100) {
+        if (i%3==0 && i%5 == 0) {
+            s = s+ 'FizzBuzz' + ' ';
+            i++;
+        }
+        s = s+i+' ';
+        i++;
+    }
+    document.write(s);
+</script> 
+</html>
