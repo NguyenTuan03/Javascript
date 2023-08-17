@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Chơi</button>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click", () => {
+        let n,i=1;
+        let n_Rand =Math.floor(Math.random()*10);
+        while (i<=3) {  
+            n = prompt("Enter n:");
+            if (n_Rand == n) {
+                alert("true");
+                break;
+            }
+            if (n_Rand != n) {
+                if (i<=2) {
+                    alert("false, please enter again");
+                }
+                else alert("False, You loose !!")
+            }
+            i++;
+        }
+    }) 
+</script>
+</html>
