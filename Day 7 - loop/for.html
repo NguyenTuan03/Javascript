@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="number" placeholder="Enter n">
+    <button id="btn">btn</button>
+    <p id="show"></p>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click", () => {
+        let n =parseInt(document.getElementById("input").value);
+        let s = '';
+        for (let i = 1; i <=n;i++ ) {
+            s +=  `<p> The number is ${i}</p>`
+        }
+        document.getElementById("show").innerHTML = s;
+    })
+</script>
+</html>     
