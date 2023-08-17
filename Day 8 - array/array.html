@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <button id="add">Add</button>
+    <button id="show">Display</button>
+    <p id="p"></p>
+</body>
+<script>
+    let a =[];
+    document.getElementById("add").addEventListener("click",() => {
+        let n = document.getElementById("input").value;
+        a.push(n);
+        document.getElementById("input").value = "";
+    })
+    document.getElementById("show").addEventListener("click",() => {
+        let s = '';
+        for (let i = 0; i <a.length; i++) {
+            s=s + "<p> Element" +i+ "=" +a[i]+ "</p>";
+        }
+        document.getElementById("p").innerHTML = s;
+    })
+</script>
+</html>
