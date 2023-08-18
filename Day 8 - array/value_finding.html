@@ -10,15 +10,16 @@
 </body>
 <script>
     let a = [4,3,5,1,5,7,10];
-    let ok = false;
+    let ok = false,d;
     let n = prompt("enter a number")
     for (let i = 0; i <a.length; i++) {
         if (a[i] == n) {
             ok=true;
+            d = i;
         }
     }
     if (ok) {
-        alert("true");
+        alert("true, at "+d+" points");
     }
     else alert("false");
 </script>
