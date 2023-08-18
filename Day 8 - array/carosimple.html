@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="table">
+        <tr class="i">
+            <td class="j">0</td>
+            <td class="j">0</td>
+            <td class="j">0</td>
+            <td class="j">0</td>
+            <td class="j">0</td>
+        </tr>
+        <tr class="i">
+            <td class="j">1</td>
+            <td class="j">1</td>
+            <td class="j">1</td>
+            <td class="j">1</td>
+            <td class="j">1</td>
+        </tr>
+        <tr class="i">
+            <td class="j">2</td>
+            <td class="j">2</td>
+            <td class="j">2</td>
+            <td class="j">2</td>
+            <td class="j">2</td>
+        </tr>
+        <tr class="i">
+            <td class="j">3</td>
+            <td class="j">3</td>
+            <td class="j">3</td>
+            <td class="j">3</td>
+            <td class="j">3</td>
+        </tr>
+        <tr class="i">
+            <td class="j">4</td>
+            <td class="j">4</td>
+            <td class="j">4</td>
+            <td class="j">4</td>
+            <td class="j">4</td>
+        </tr>
+    </table>
+    <p>
+        <button id="change">Change Value</button>
+    </p>
+    <p id="input">
+    </p>
+</body>
+<script>
+    let a = [];
+    let row = document.querySelectorAll(".i");
+    let col = [];
+    for (let i=0;i<row.length;i++) {
+        a[i] = [];
+        let col = row[i].querySelectorAll(".j");
+        for (let j=0;j<col.length;j++) {
+            a[i][j] = col[j].textContent
+        }
+    }
+    console.log(a)
+    document.getElementById("change").addEventListener("click",() => {
+        let input = document.getElementById("input");
+        input.innerHTML = ` <span>Nhap x</span>
+                            <input type="number" id="x"><br>
+                            <span>Nhap y</span>
+                            <input type="number" id="y">
+                            <button id="change1">Change</button>
+        `
+        document.getElementById("change1").addEventListener("click",change)
+    })
+    function change() {
+        let x = parseInt(document.getElementById("x").value);
+        let y = parseInt(document.getElementById("y").value);
+        a[x][y] = 'x';
+        document.getElementById("x").value = "";
+        document.getElementById("y").value = "";
+        renderTable();
+    }    
+    function renderTable() {
+        let table = document.getElementById("table");
+        table.innerHTML = "";
+        for (let i =0;i<a.length;i++) {
+            let row = document.createElement("tr");
+            for (let j = 0;j < a[i].length;j++) {
+                let cells = document.createElement("td");
+                cells.textContent = a[i][j];
+                row.appendChild(cells);
+            }
+            table.appendChild(row);
+        }
+    }
+</script>
+</html>
