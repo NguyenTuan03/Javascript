@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="table" border="2" cellspacing = '3' cellpadding = '2' style="margin: auto; width: 50%; height: 300px;">
+        <tr class="i" style="text-align: center;">
+            <td class="j">.</td>
+            <td class="j">.</td>
+            <td class="j">.</td>            
+        </tr>
+        <tr class="i" style="text-align: center;">
+            <td class="j">.</td>
+            <td class="j">.</td>
+            <td class="j">.</td>
+        </tr>
+        <tr class="i" style="text-align: center;">
+            <td class="j">.</td>
+            <td class="j">.</td>
+            <td class="j">.</td>
+        </tr>
+    </table>
+    <p id="input">
+    </p>
+</body>
+<script>
+    let a = [];
+    let row = document.querySelectorAll(".i");
+    let col = [];
+    for (let i=0;i<row.length;i++) {
+        a[i] = [];
+        let col = row[i].querySelectorAll(".j");
+        for (let j=0;j<col.length;j++) {
+            a[i][j] = col[j].textContent
+        }
+    }
+    let initialPlayer = "O";
+    document.getElementById("table").addEventListener("click",(e) => {
+        if (e.target.classList.contains("j")) {
+            let rowParent = e.target.parentElement;
+            let rowIndex = Array.from(row).indexOf(rowParent);
+            let colIndex = Array.from(rowParent.querySelectorAll(".j")).indexOf(e.target);
+            e.target.textContent = initialPlayer;
+            a[rowIndex][colIndex] = e.target.textContent
+            if (checkWin(initialPlayer)) {
+                document.getElementById("input").innerText = `${initialPlayer} Win !`
+            }
+            else {
+                initialPlayer = initialPlayer == "O" ? "X" : "O";
+            }
+            console.log(a)
+        }
+    })
+    function checkWin(player) {
+        for (let i=0;i<3;i++) {
+            if (a[i][0] == player && a[i][1] == player && a[i][2] == player) {
+                return true;
+            }
+            if (a[0][i] == player && a[1][i] == player && a[2][i] == player) {
+                return true;
+            }
+        }
+        if (a[0][0] == player && a[1][1] == player && a[2][2] == player) {
+            return true;
+        }
+        if (a[0][2] == player && a[1][1] == player && a[2][0] == player) {
+            return true;
+        }
+        return false;
+    }
+</script>
+</html>
