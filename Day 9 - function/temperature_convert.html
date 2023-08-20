@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <label>Fahrenheit</label>
+    <input type="number" id="input">
+    <button id="btn">Change</button>
+    <span>Celcius</span>
+    <span id="show"></span>
+</body>
+<script>
+    function change() {
+        let c =parseInt(document.getElementById("input").value);
+        let s = (c - 32 * 5)/9;
+        console.log(s);
+    }
+    document.getElementById("btn").addEventListener("click",change);
+</script>
+</html>
