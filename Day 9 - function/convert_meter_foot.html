@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Enter n:</span>
+    <input type="number" id="number">
+    <button onclick="Tometer()">Change to meter</button>
+    <button onclick="Tofoot()">Change to foot</button>
+    <p id="show"></p>
+</body>
+<script>
+    function Tometer() {
+        let n = parseFloat(document.getElementById("number").value);
+        document.getElementById("show").innerText = n *0.305
+    }
+    function Tofoot() {    
+        let n = parseFloat(document.getElementById("number").value);
+        document.getElementById("show").innerText = n * 3.279;
+    }
+    
+</script>
+</html>
