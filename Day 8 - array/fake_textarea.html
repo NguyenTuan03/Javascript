@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="area" cols="30" rows="10"></textarea>
+</body>
+<script>
+    let a = [];
+    a.push("M");
+    a.push("Y");
+    a.push(" ");
+    a.push("N");
+    a.push("A");
+    a.push("M");
+    a.push("E");
+    a.push(" ");
+    a.push("I");
+    a.push("S");
+    a.push(" ");
+    a.push("T");
+    a.push("U");
+    a.push("A");
+    a.push("N");
+    a.push("!");
+    let s = "";
+    console.log(a);
+    let i = 0;
+    document.getElementById("area").addEventListener("keyup",(e) => {
+        s = s+ a[i];
+        e.target.value = s;
+        i++;
+        if (i==16) {
+            s="";
+            i=0;
+        }
+    })
+</script>
+</html>
