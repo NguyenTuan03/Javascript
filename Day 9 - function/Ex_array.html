@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let a = prompt("Enter a");
+    // let b = prompt("Enter b");
+    // alert(compare(a, b));
+    // function compare(a, b) {
+    //     if (a > b) return a + ">" + b
+    //     else return parseInt(a) + parseInt(b);
+    // }
+    ////////////////////////////////////////////////////////////////
+    // let str = prompt("Enter star");
+    // let a = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe ","Regulus"];
+    // let b = ["Ursa Mino","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    // alert(exercise(str))
+    // function exercise(str) {
+    //     for (let i = 0; i < a.length; i++) {
+    //         if (str == a[i]) 
+    //             return b[i];
+    //         else return "Cannot find"
+    //     }
+    // }
+    ////////////////////////////////////////////////////////////////
+    // function bp(a) {
+    //     return a*a;
+    // }
+    // let a = prompt("Enter a:");
+    // parseInt(a);
+    // alert(bp(a))
+    ////////////////////////////////////////////////////////////////
+    // function dt(a) {
+    //     return Math.floor(Math.PI*a*a);
+    // }
+    // function cv(a) {
+    //     return Math.floor(Math.PI*a*2);
+    // }
+    // let r = prompt("Enter r: ");
+    // parseInt(r);
+    // alert("dt = "+dt(r)+" cv = "+cv(r));
+    ////////////////////////////////////////////////////////////////
+    // function gt(a) {
+    //     let s= 1;
+    //     for (let i=1;i<=a;i++) {
+    //         s=s*i;
+    //     }
+    //     return s;
+    // }
+    // let a = prompt("Enter a:");
+    // parseInt(a);
+    // alert(gt(a))
+    ////////////////////////////////////////////////////////////////
+    // function ktra(c) {
+    //     if (!isNaN(c)) return true;
+    //     else return false;
+    // }
+    // let a = prompt("Enter a:");
+    // alert(ktra(a))
+    ////////////////////////////////////////////////////////////////
+    // function minn(a,b,c) {
+    //     return Math.min(a,b,c);
+    // }
+    // let a = prompt("Enter a:");
+    // let b = prompt("Enter b:");
+    // let c = prompt("Enter c:");
+    // parseInt(a);
+    // parseInt(b);
+    // parseInt(c);
+    // alert(minn(a,b,c))
+    ////////////////////////////////////////////////////////////////
+    // function ktra(a){
+    //     if (a>=0) return true;
+    //     else return false;
+    // }
+    // let a = prompt("Enter a:");
+    // parseInt(a);
+    // alert(ktra(a))
+    ////////////////////////////////////////////////////////////////
+    // let a = [5, 4, 7, 45, 7, 4, 2];
+    // function rv(arr) {
+    // alert(arr.reverse());
+    // }
+    // rv(a); 
+    ////////////////////////////////////////////////////////////////
+    let a = ['a', 'b', 'c', 'd', 'a', 'a', 'g', 'h','i', 'j', 'k']
+    let ch = 'a';
+    function ktra(c, arr) {
+        let  d=0;
+        for (let i=0; i<arr.length; i++) {
+            if (c == arr[i]) d++;
+        }
+        if (d==0) return false;
+        else return d;
+    }
+    alert(ktra(ch,a))
+</script>
+</html>
